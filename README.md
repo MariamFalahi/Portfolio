@@ -4,5 +4,4 @@
     sub-folders according to their type. The code runs in the computer background to perform the cleaning and organizing tasks according 
     to a pre-define schedule using Task Sceduler.
   - Data cleaning: Jobs data scapped from Glassdoor website are cleaned and processed to be used in the next project (Tech jobs dashboard). Although the data was cleaned, it was cleaned and processed again using      python to fit the structure of the dashboard. The original dataset can be found in Kaggle through this link: https://www.kaggle.com/datasets/rashikrahmanpritom/data-science-job-posting-on-glassdoor.
-  - Fifa Worldcup in Numbers: Records of all previuos games from 1930 to 2022 are explored using SQL by solving 10 queries. The dataset can be found in Kaggle website through this link: https://www.kaggle.com    /datasets/iamsouravbanerjee/fifa-football-world-cup-dataset. 
-    
+  - Fifa Worldcup in Numbers: Records of all previuos games from 1930 to 2022 are explored using SQL by solving 10 queries. The dataset can be found in Kaggle website through this link:https://www.kaggle.com/datasets/iamsouravbanerjee/fifa-football-world-cup-dataset
