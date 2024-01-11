@@ -1,8 +1,14 @@
 # Portfolio
-## In this respository you can find the codes for the follwing projects:
-  - Desktop cleaner and files organizer: In this project we develop a python code to move all the files on the desktop to a specific folder and then classify the files into different 
-    sub-folders according to their type. The code runs in the computer background to perform the cleaning and organizing tasks according 
-    to a pre-define schedule using Task Sceduler.
-  - Data cleaning: Jobs data scapped from Glassdoor website are cleaned and processed to be used in the next project (Tech jobs dashboard). Although the data was cleaned, it was cleaned and processed again using      python to fit the structure of the dashboard. The original dataset can be found in Kaggle through this link: https://www.kaggle.com/datasets/rashikrahmanpritom/data-science-job-posting-on-glassdoor.
-  - Fifa Worldcup in Numbers: Records of all previuos games from 1930 to 2022 are explored using SQL by solving 10 queries. The dataset can be found in Kaggle website through this link:https://www.kaggle.com/datasets/iamsouravbanerjee/fifa-football-world-cup-dataset.
-  - MachineLearning (classification): In this project, multiple classification models are trained, tested and evaluated to select the best model that will results in higher accuracy in classifying the breast cancer tumor to benign (non-cancerous) or malignant (cancerous) based on the characteristists of the tumor. The data was provided by the University of Wisconsin and can be found in Kaggle website through this link: https://www.kaggle.com/datasets/roustekbio/breast-cancer-csv. 
+## In this repository, you will find code implementations for the following projects:
+
+### Desktop Cleaner and Files Organizer:
+This Python project focuses on decluttering the desktop by relocating all files to a designated folder. Subsequently, it classifies these files into distinct sub-folders based on their types. The code operates in the background, executing scheduled cleaning and organizing tasks through Task Scheduler.
+  
+### Data Cleaning:
+This project involves the cleaning and preprocessing of job data scraped from the Glassdoor website. The refined data serves as a foundation for the subsequent project, the Tech Jobs Dashboard. Despite an initial cleaning process, additional refinement was carried out using Python to align with the dashboard's structure. The original dataset is accessible on Kaggle via the following link: https://www.kaggle.com/datasets/rashikrahmanpritom/data-science-job-posting-on-glassdoor.
+
+### FIFA World Cup in Numbers:
+This project delves into the historical records of FIFA World Cup games spanning from 1930 to 2022. The exploration is facilitated using SQL, addressing 10 specific queries. The dataset can be obtained from Kaggle using this link: https://www.kaggle.com/datasets/iamsouravbanerjee/fifa-football-world-cup-dataset.
+
+### Machine Learning (Classification):
+This Python-based project involves training, testing, and evaluating multiple classification models. The objective is to identify the most accurate model for classifying breast cancer tumors as benign or malignant based on their characteristics. The dataset, sourced from the University of Wisconsin, is available on Kaggle through the following link: https://www.kaggle.com/datasets/roustekbio/breast-cancer-csv. 
