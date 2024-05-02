@@ -4,7 +4,7 @@
 ### Machine Learning (Classification)
 This Python-based project involves training, testing, and evaluating multiple classification models. The objective is to identify the most accurate model for classifying breast cancer tumors as benign or malignant based on their characteristics. The dataset, sourced from the University of Wisconsin, is available on Kaggle through the following link: https://www.kaggle.com/datasets/roustekbio/breast-cancer-csv. 
 
-### Sales Data Analysis using Pandas
+### Sales Data Analysis Using Pandas
 
 ### Machine Learning (Deep Learning)
   
