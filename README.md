@@ -16,13 +16,13 @@ This project involves the cleaning and preprocessing of job data scraped from th
 This Power BI Dashboard provides insights into salaries and skills for data-related positions and offers an interface for exploring salary trends and sought-after skills in the tech job market.
 
 ### FIFA World Cup in Numbers
-This project delves into the historical records of FIFA World Cup games spanning from 1930 to 2022. The exploration is facilitated using SQL, addressing 10 specific queries. The dataset can be obtained from Kaggle using this link: https://www.kaggle.com/datasets/iamsouravbanerjee/fifa-football-world-cup-dataset.
+This project explored the historical records of FIFA World Cup games spanning from 1930 to 2022. The exploration is facilitated using SQL, addressing 10 specific queries. The dataset can be obtained from Kaggle using this link: https://www.kaggle.com/datasets/iamsouravbanerjee/fifa-football-world-cup-dataset.
 
 ### Desktop Cleaner and Files Organizer:
 This Python project focuses on decluttering the desktop by relocating all files to a designated folder. Subsequently, it classifies these files into distinct sub-folders based on their types. The code operates in the background, executing scheduled cleaning and organizing tasks through the Task Scheduler.
 
 ### Multi-objective Optimization With Julia
-
+This Julia code was developed to design a Produced Water (PW) Treatment System that consists of multiple processing units. PW is the water associated with the extraction of oil and gas and it is the largest waste stream in the oil and gas industry. This code aims to find the optimal design of the processing units and their configuration that minimizes the cost and the emission of the system. The optimization problem was solved using a nature-inspired algorithm called Fresa. This code is one of the contributions of my PhD degree.  
 
 
 ### Data Visualization Using Python 
