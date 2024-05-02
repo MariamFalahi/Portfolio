@@ -5,6 +5,7 @@
 This Python-based project involves training, testing, and evaluating multiple classification models. The objective is to identify the most accurate model for classifying breast cancer tumors as benign or malignant based on their characteristics. The dataset, sourced from the University of Wisconsin, is available on Kaggle through the following link: https://www.kaggle.com/datasets/roustekbio/breast-cancer-csv. 
 
 ### Sales Data Analysis Using Pandas
+In this project, Pandas library is used to analyze actual transactions from UK retailers. The analysis starts by exploring the dataset and processing the data to answer seven questions aimed at improving the profitability of the retailers. The dataset can be found on Kaggle using this link: https://www.kaggle.com/datasets/carrie1/ecommerce-data
 
 ### Machine Learning (Deep Learning)
   
@@ -23,5 +24,7 @@ This Python project focuses on decluttering the desktop by relocating all files 
 ### Multi-objective Optimization With Julia
 
 
+
 ### Data Visualization Using Python 
+This Python file includes the code I wrote to visualize the results obtained by implementing the multi-objective optimization code. The figures shown in this file are included in my PhD thesis.  
 
