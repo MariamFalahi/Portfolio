@@ -19,7 +19,7 @@ This Power BI Dashboard provides insights into salaries and skills for data-rela
 ### FIFA World Cup in Numbers
 This project explored the historical records of FIFA World Cup games spanning from 1930 to 2022. The exploration is facilitated using SQL, addressing 10 specific queries. The dataset can be obtained from Kaggle using this link: https://www.kaggle.com/datasets/iamsouravbanerjee/fifa-football-world-cup-dataset.
 
-### Desktop Cleaner and Files Organizer:
+### Desktop Cleaner and Files Organizer
 This Python project focuses on decluttering the desktop by relocating all files to a designated folder. Subsequently, it classifies these files into distinct sub-folders based on their types. The code operates in the background, executing scheduled cleaning and organizing tasks through the Task Scheduler.
 
 ### Multi-objective Optimization With Julia
