@@ -1,0 +1,483 @@
+Sets
+
+p Pretreatement technologies /API,CPI/
+i Secondary treatement techologies /IGF, HC, CF, NF, MF,ibypass/
+f Final treatement techologies /MED, MVC, fbypass/
+j Sequence of the technology accross the system / 1*5/
+c Contaminant concentration /OnG, TSS, TDS/
+chem Chemicals / Chem1,  Chem2,  Chem3,  Chem4, Chem5, Acid, Base/
+;
+
+Parameters
+qtotal Maximum total output flow rate of the system (ton) /80/
+ft Working hours of the system per year (hr) /8760/
+Cen Energy price ($kwh^-1) /0.02/
+Csltr Sludge handling cost ($) /6.5/
+*qfeed Initial feed (ton.hr-1) /79.2/
+lamda
+Cfeed(c) Initial feed composition (mgL-1) /OnG 1850
+                                           TSS 189
+                                           TDS 100000/
+
+Inv1(p) Investment cost for each technology at pretreatement stage ($) / API  126560
+                                                                         CPI  15820/
+
+Inv2(i) Investment cost for each technology at secondary treatement stage ($) / IGF  39550
+                                                                                HC  367714
+                                                                                CF  570000
+                                                                                NF  237300
+                                                                                MF  291468
+                                                                                ibypass  0.0/
+
+Inv3(f) Investment cost for each technology at final treatement stage ($)/ MED  4996085
+                                                                           MVC  3524315
+                                                                           fbypass 0.0/
+
+rsludge1(p) Sludge fraction of influent flow rate at pretreatement treatement  /API  0.05
+                                                                           CPI  0.05/
+
+rsludge2(i) Sludge fraction of influent flow rate at secondary treatement  /IGF 0.03
+                                                                       HC  0.04
+                                                                       CF  0.025
+                                                                       NF  0.0001
+                                                                       MF  0.075
+                                                                       ibypass  0.0/
+
+rsludge3(f) Sludge fraction of influent flow rate at final treatement      /MED  0.062
+                                                                       MVC  0.05
+                                                                       fbypass 0.0/
+Cost(chem) Cost of chemicals ($) / chem1    2268
+                                   chem2    72
+                                   chem3    45676
+                                   Chem4    5175
+                                   Chem5    0
+                                   Acid     0
+                                   Base     0/
+
+
+qup1(p) Maximum flow rate at pretreatment unit (ton.h^-1) /API  80
+                                                           CPI  80/
+
+qup2(i) Maximum flow rate at secondary treatment unit (ton.h^-1) /IGF  80
+                                                                  HC   80
+                                                                  CF   80
+                                                                  NF   80
+                                                                  MF   80
+                                                                  ibypass  100/
+
+qup3(f) Maximum flow rate at final treatment unit (ton.h^-1) /MED  80
+                                                              MVC  80
+                                                              fbypass 900/
+
+re1(p) Specific energy consumtion at pretreatement unit (kWh.ton-1) /API  0.19
+                                                                    CPI  0.19/
+
+re2(i) Specific energy consumtion at secondary treatement unit (kWh.ton-1) /IGF  0.7
+                                                                           HC   1.1
+                                                                           CF   0.75
+                                                                           NF   0.4
+                                                                           MF   0.96
+                                                                           ibypass  0/
+
+re3(f) Specific energy consumtion at final treatement unit (kWh.ton-1) /MED  1
+                                                                       MVC  37
+                                                                       fbypass 0/
+
+Ctotal(c) Final Water quality requirements (mgL^-1) /OnG     10.0
+                                                     TSS     5.0
+                                                     TDS     1250/
+
+
+Table rr1(p,c)  Separation efficiency at pretreatement unit
+                                 OnG    TSS    TDS
+                         API     0.9    0.75    0.0
+                         CPI     0.9    0.80    0.0
+
+
+Table rr2(i,c)  Separation efficiency at secondary treatement unit
+                              OnG     TSS   TDS
+                       IGF    0.96    0.85   0.0
+                       HC     0.99    0.80   0.0
+                       CF     0.93    0.80   0.0
+                       NF     0.98    0.99   0.0
+                       MF     0.99    0.98   0.0
+                  ibypass     0.0     0.0    0.0
+
+Table rr3(f,c)  Separation efficiency at final treatement unit
+                               OnG    TSS   TDS
+                       MED     0.99   1.00  1.00
+                       MVC     0.99   1.00  1.00
+                     fbypass   0.0    0.0   0.0
+
+Table rc1(p,chem) Chemicals fraction of influent flow rate at pretreatement unit
+                              Chem1  Chem2  Chem3  Chem4 Chem5 Acid   Base
+                       API     0.0    0.0     0.0    0.0   0.0  0.0    0.0
+                       CPI     0.0    0.0     0.0    0.0   0.0  0.0    0.0
+
+Table rc2(i,chem) Chemicals fraction of influent flow rate at secondary treatement unit
+                            Chem1      Chem2     Chem3  Chem4 Chem5   Acid     Base
+                      IGF    5.61e-5   0.0        0.0    0.0   0.0    0.0      0.0
+                       HC    4.21e-5   0.0        0.0    0.0   0.0    0.0      0.0
+                       CF    2.8e-5    0.0        0.0    0.0   0.0    0.0      0.0
+                       NF    0.0       4.67e-6    0.0    0.0   0.0    0.0      0.0
+                       MF    0.0       1.4e-5     0.0    0.0   0.0    0.0      0.0
+                  ibypass    0.0       0.0        0.0    0.0   0.0    0.0      0.0
+
+Table rc3(f,chem) Chemicals fraction of influent flow rate at final treatement unit
+                            Chem1    Chem2     Chem3  Chem4       Chem5  Acid Base
+                     MED     0.0    4.67e-6    9.35e-6  3.74e-6    0.0   0.0  0.0
+                     MVC     0.0    4.67e-6    9.35e-6  3.74e-6    0.0   0.0  0.0
+                 fbypass     0.0    0.0        0.0      0.0        0.0   0.0  0.0
+
+Table Cup1(p,c) Maximum influent contaminant concentration at pretreatement unit (mgL^-1)
+                            OnG     TSS     TDS
+                     API    20000   1000   400000
+                     CPI    10000    400    400000
+
+Table Cup2(i,c) Maximum influent contaminant concentration at secondary treatement unit (mgL^-1)
+                            OnG    TSS      TDS
+                     IGF    1000   200     400000
+                     HC     3000   200     400000
+                     CF     10000  3000    400000
+                     NF     100    30      400000
+                     MF     180    20      400000
+                ibypass     30000  30000   400000
+
+Table Cup3(f,c) Maximum influent contaminant concentration at final treatement unit (mgL^-1)
+                              OnG      TSS      TDS
+                     MED      20       10     100000
+                     MVC      20       10     200000
+                fbypass       30000    30000    400000
+
+;
+
+
+Positive Variables
+qfeed
+qp outlet treated water mass flow rate from pretreatment unit (ton.h^-1)
+q(j) outlet treated water mass flow rate from stage j in the secondary treatment unit (ton.h^-1)
+qf  outlet treated water mass flow rate from final treatment unit (ton.h^-1)
+
+ChemicalP inlet mass flow rate of consumed chemicals in pretreatment unit (ton.h^-1)
+Chemical(j) inlet mass flow rate of consumed chemical chem at stage j in the secondary treatment unit (ton.h^-1)
+ChemicalF inlet mass flow rate of consumed chemicals in the final treatment unit (ton.h^-1)
+
+Sludgep outlet mass flow rate of sludge stream from pretreatment unit(ton.h^-1)
+Sludge(j) outlet mass flow rate of sludge stream at  at stage j in the secondary treatment unit (ton.h^-1)
+Sludgef outlet mass flow rate of sludge stream from final treatment unit (ton.h^-1)
+
+EP energy consumption at pretreatment unit (kW)
+E(j) energy consumption at secondary treatement unit (kW)
+EF energy consumption at final treatement unit (kW)
+
+CP(c) Outlet concentration of contaminant c at pretreatment unit (mgL^-1)
+C2(j,c) Outlet concentration of contaminant c at stage j of secondary treatment unit (mgL^-1)
+CF(c) Outlet concentration of contaminant c at final treatment unit (mgL^-1)
+
+Csludge1(c) outlet sludge stream contaminant concentration at the pretreatment unit (mgL^-1)
+Csludge2(j,c) outlet sludge stream contaminant concentration at the secondary treatment unit (mgL^-1)
+Csludge3(c) outlet sludge stream contaminant concentration at the final treatment unit (mgL^-1)
+
+CChemicalp cost of consumed chemicals in pretreatment unit ($te^-1)
+CChemical(j) cost of consumed chemical chem at stage j in the secondary treatment unit ($te^-1)
+CChemicalf cost of consumed chemicals in the final treatment unit ($te^-1)
+
+
+Variable
+CC system capital cost
+OC system operating cost
+z  Objective function
+;
+
+Binary Variables
+y1(p) binary variable for technology selection at pretreatement unit
+y2(i,j) binary variable for technology selection at secondary treatement unit
+y3(f) binary variable for technology selection at final treatement unit
+;
+
+*qfeed.lo=79;
+
+*Amount of consumed chemicals
+Equation ChemicalsatP The amount of consumed chemicals at pretreatment unit;
+         ChemicalsatP ..ChemicalP=e=sum((p,chem),rc1(p,chem)*qfeed*y1(p));
+
+Equation Chemicalsatj1 The amount of consumed chemicals at secondary treatment unit at j=1;
+         Chemicalsatj1 ..Chemical('1')=e=sum((i,chem),rc2(i,chem)*qp*y2(i,'1'));
+
+Equation Chemicalsatj(j) The amount of consumed chemicals at secondary treatment unit;
+         Chemicalsatj(j)$(ord(j)>=2) ..Chemical(j)=e=sum((i,chem),rc2(i,chem)*q(j-1)*y2(i,j));
+
+Equation Chemicalsatf The amount of consumed chemicals at final treatement unit;
+         Chemicalsatf ..ChemicalF=e=sum((f,chem),rc3(f,chem)*q('5')*y3(f));
+
+*Cost of consumed chemicals
+Equation CChemicalsatP The cost of consumed chemicals at pretreatment unit;
+         CChemicalsatP ..CChemicalP=e=sum((p,chem),rc1(p,chem)*Cost(chem)*qfeed*y1(p));
+
+Equation CChemicalsatj1 The cost of consumed chemicals at secondary treatment unit at j=1;
+         CChemicalsatj1 ..CChemical('1')=e=sum((i,chem),rc2(i,chem)*Cost(chem)*qp*y2(i,'1'));
+
+Equation CChemicalsatj(j) The cost of consumed chemicals at secondary treatment unit;
+         CChemicalsatj(j)$(ord(j)>=2) ..CChemical(j)=e=sum((i,chem),rc2(i,chem)*Cost(chem)*q(j-1)*y2(i,j));
+
+Equation CChemicalsatf The cost of consumed chemicals at final treatement unit;
+         CChemicalsatf ..CChemicalF=e=sum((f,chem),rc3(f,chem)*Cost(chem)*q('5')*y3(f));
+
+*Amount of generated sludge
+Equation Sludgeatp The amount of generated sludged at pretreatment unit;
+         Sludgeatp..Sludgep=e=sum(p,rsludge1(p)*y1(p)*(qfeed+ChemicalP));
+
+Equation Sludgeatj1 The amount of generated sludged at secondary treatment unit at j=1;
+         Sludgeatj1..Sludge('1')=e=sum(i,rsludge2(i)*y2(i,'1')*(qp+Chemical('1')));
+
+Equation Sludgeatj(j) The amount of generated sludged at secondary treatment unit;
+         Sludgeatj(j)$(ord(j)>=2) ..Sludge(j)=e=sum(i,rsludge2(i)*y2(i,j)*(q(j-1)+Chemical(j)));
+
+Equation Sludgeatf The amount of generated sludged at final treatment unit;
+         Sludgeatf..Sludgef=e=sum(f,rsludge3(f)*y3(f)*(q('5')+ChemicalF));
+
+*Total mass malance equations
+Equation MB1p Mass balance equation 1 for pretreatment unit;
+         MB1p..qp=e=sum(p,(qfeed+ChemicalP-Sludgep)*y1(p));
+
+Equation MB1j1 Mass balance equation 1 for secondary treatment unit at j=1;
+         MB1j1..q('1')=e=sum(i,(qp+Chemical('1')-Sludge('1'))*y2(i,'1'));
+
+Equation MB1sj(j) Mass balance equation 1 for secondary treatment unit;
+         MB1sj(j)$(ord(j)>=2)..q(j)=e=sum(i,(q(j-1)+Chemical(j)-Sludge(j))*y2(i,j));
+
+Equation MB1f Mass balance equation 1 for final treatment unit;
+         MB1f..qf=e=sum(f,(q('5')+ChemicalF-Sludgef)*y3(f));
+
+
+*Partial mass malance equations
+Equation MB2p(c) Mass balance equation 2 at pretreatement unit;
+         MB2p(c) ..Csludge1(c)*Sludgep=e=(qfeed*Cfeed(c))-(qp*CP(c));
+
+Equation MB2j1(j,c) Mass balance equation 2 at secondary treatement unit;
+         MB2j1(j,c) ..Csludge2('1',c)*Sludge('1')=e=(qp*CP(c))-(q('1')*C2('1',c));
+
+Equation MB2j(j,c) Mass balance equation 2 at secondary treatement unit;
+         MB2j(j,c) $(ord (j)>=2)..Csludge2(j,c)*Sludge(j)=e=q(j-1)*C2(j-1,c)-q(j)*C2(j,c);
+
+Equation MB2f(c) Mass balance equation 2 at final treatement unit;
+         MB2f(c) ..Csludge3(c)*Sludgef=e=(q('5')*C2('5',c))-(qf*CF(c));
+
+*Energy consumption
+Equation Energyatp Energy consumption at pretreatement unit;
+         Energyatp ..EP=e=sum(p,re1(p)*y1(p)*(qfeed+ChemicalP));
+
+Equation Energyatsj1(j) Energy consumption at secondary treatement unit when j=1;
+         Energyatsj1(j)$(ord(j)=1)..E('1')=e=sum(i,re2(i)*y2(i,'1')*(qp+Chemical('1')));
+
+Equation Energyatsj(j) Energy consumption at secondary treatement;
+         Energyatsj(j)$(ord(j)>=2)..E(j)=e=sum(i,re2(i)*y2(i,j)*(q(j-1)+Chemical(j)));
+
+Equation Energyatf Energy consumption at final treatement unit;
+         Energyatf..EF=e=sum(f,re3(f)*y3(f)*(q('5')+ChemicalF));
+
+
+*Contaminant level of the output stream
+Equation Catp(c)  Contaminant level of the output stream (from P to j=1);
+         Catp(c)..CP(c)=e=sum(p,Cfeed(c)*(1-(rr1(p,c)))*y1(p));
+
+Equation CatSj1(c)  Contaminant level of the output stream (from j=1 to j=2);
+         CatSj1(c)..C2('1',c)=e=sum(i,CP(c)*(1-(rr2(i,c)))*y2(i,'1'));
+
+Equation CatSj(j,c) Contaminant level of the output stream (from j=2 to F);
+         CatSj(j,c)$(ord(j)>=2)..C2(j,c)=e=sum(i,C2(j-1,c)*(1-(rr2(i,c)))*y2(i,j));
+
+Equation Catf(c)  Contaminant level of the final output stream;
+         Catf(c)..CF(c)=e=sum(f,C2('5',c)*(1-(rr3(f,c)))*y3(f));
+
+*Logical constraints
+Equation Logicp Logical relation at pretreatment unit;
+         Logicp ..sum(p,y1(p))=e=1;
+
+Equation Logicj(j) Logical relation at secondary treatment unit (only one technology is selected at each j);
+         Logicj(j) ..sum(i,y2(i,j))=e=1;
+
+Equation Logici(i) Logical relation at secondary treatment unit (each technology is assigned once except ibypass);
+         Logici(i) $(ord(i) ne 6)..sum(j,y2(i,j))=l=1;
+
+Equation Logicf Logical relation at final treatment unit;
+         Logicf ..sum(f,y3(f))=e=1;
+
+y1.fx('API')=1;
+y1.fx('CPI')=1; 
+*Flow rate constraints
+Equation Maxqp Maximum value for flow rate at pretreatement unit;
+         Maxqp ..qfeed=l=sum(p,y1(p)*qup1(p));
+
+Equation Maxqj1 Maximum value for flow rate at j=1;
+         Maxqj1..qp=l=sum(i,y2(i,'1')*qup2(i));
+
+Equation Maxqj(j) Maximum value for flow rate at 2<=j<=4;
+         Maxqj(j)$(ord(j)>=2 and ord(j)<=4)..q(j)=l=sum(i,y2(i,j+1)*qup2(i));
+
+Equation Maxqf Maximum value for flow rate at final treatement unit;
+         Maxqf..q('5')=l=sum(f,y3(f)*qup3(f));
+
+*Contaminant level constraints
+Equation CUatp(c) Maximum allowable contaminant level at pretreatement unit;
+         CUatp(c)..Cfeed(c)=l=sum(p,y1(p)*Cup1(p,c));
+
+Equation CUatj1(c) Maximum allowable contaminant level at j=1;
+         CUatj1(c)..Cp(c)=l=sum(i,y2(i,'1')*Cup2(i,c));
+
+Equation CUatj(j,c) Maximum allowable contaminant level at j>=2;
+         CUatj(j,c)$(ord(j)>=1 and ord(j)<=4)..C2(j,c)=l=sum(i,y2(i,j+1)*Cup2(i,c));
+
+Equation CUatf(c) Maximum allowable contaminant level at final treatement unit;
+         CUatf(c)..C2('5',c)=l=sum(f,y3(f)*Cup3(f,c));
+
+Equation Total(c) Contaminant concentration of the total output stream of the system;
+         Total(c)..qf*Cf(c)=l=qtotal*Ctotal(c);
+
+
+*Objective function
+Equation Obj1 Capital cost;
+         Obj1..CC=e=sum(p,Inv1(p)*y1(p))+
+                     sum((j,i),Inv2(i)*y2(i,j))+
+                     sum(f,Inv3(f)*y3(f));
+
+Equation Obj2 Operating Cost;
+         Obj2..OC=e=(EP+sum(j,E(j))+EF)*Cen*ft+
+                   (Sludgep+sum(j,Sludge(j))+Sludgef)*Csltr*ft+
+                   (CChemicalP+sum(j,CChemical(j))+CChemicalF)*ft;
+;
+
+Equation obj objective function;
+         obj..z =e= lamda*CC + (1-lamda)*OC;
+
+
+option optcr=0;
+option reslim=3600;
+option solveOpt = replace;
+option MINLP = Baron;
+
+
+Set w /1*20/
+Set k /CC, OC/
+;
+
+parameter
+
+$ontext
+lamd(w)/1 0, 2 0.1 , 3 0.2  ,4  0.2, 5 0.25,6  0.3,7  0.35,8   0.4,9   0.45,10  0.5, 11 0.55, 12 0.6, 13  0.65 ,14 0.7 ,15  0.75, 16  0.8 ,17  0.85 ,18 0.9  , 19 0.95  ,20 1 / ;
+lamd(w)/1 1,2 0/ ;
+
+lamd(w)/1 0.1, 2 0.15 , 3 0.2  , 4  0.25 , 5  0.3, 6  0.35 , 7  0.4 , 8 0.45 , 9 0.5 , 10  0.55 , 11  0.6 , 12  0.65, 13  0.7, 14  0.75 , 15  0.8 , 16  0.85 , 17   0.9,
+18  0.95, 19 0, 20 1 / ;
+$offtext
+
+
+
+lamd(w)/1 1,2 0.2, 3 0/ ;
+*Parameter pareto 'Pareto points';
+Parameter pareto(w,k) 'Pareto points';
+
+Model Superstructure /all/;
+loop (w,
+
+*lamd(w+1)=lamd(w)+0.1;
+     lamda=lamd(w);
+option MINLP = Baron;
+Solve Superstructure minimizing z using MINLP;
+     pareto(w, 'CC') = CC.l;
+     pareto(w, 'OC') = OC.l;
+display y1.l, y2.l,y3.l,CC.l,OC.l;
+display pareto;
+
+);
+
+
+
+
+
+
+$ontext
+Ecostp.l(p)=E1.l(p)*Cen*ft;
+Ecost.l(j)= E2.l(j)*Cen*ft;
+Ecostf.l(f)= E3.l(f)*Cen*ft;
+SludgeCp.l=Sludgep.l*Csltr*ft;
+SludgeC.l(j)=Sludge.l(j)*Csltr*ft;
+SludgeCf.l=Sludgef.l*Csltr*ft;
+$offtext
+
+
+$ontext
+Display y1.l,y2.l,y3.l,qp.l,q.l,qf.l,Achemp.l,Achem.l,Achemf.l,Cchemp.l,Cchem.l,Cchemf.l,OMCp.l,OMC.l,OMCf.l,Sludgep.l,Sludge.l,Sludgef.l,E1.l,E2.l,E3.l;
+Display Cp.l,C2.l,Cf.l,Csludge1.l,Csludge2.l,Csludge3.l,Ecostp.l,Ecost.l,Ecostf.l,SludgeCp.l,SludgeC.l,SludgeCf.l;
+display pareto;
+Ecostp.l,Ecost.l,Ecostf.l
+SludgeCp.l,SludgeC.l,SludgeCf.l
+
+
+Display y1.l,y2.l,y3.l,qp.l,q.l,qf.l,Achemp.l,Achem.l,Achemf.l,Cchemp.l,Cchem.l,Cchemf.l,Sludgep.l,Sludge.l,Sludgef.l,EP.l,E.l,EF.l;
+Display Cp.l,C2.l,Cf.l,Csludge1.l,Csludge2.l,Csludge3.l;
+display pareto;
+$offtext
+
+$ontext
+*Cost of operations and maintenance
+Equation COMatP Operations and maintenance cost at pretreatment unit;
+         COMatP..OMCp=e=sum(p,qfeed*Com1(p)*y1(p));
+
+Equation COMatj1(j) Operations and maintenance cost at secondary treatment unit at j=1;
+         COMatj1(j)..OMC('1')=e=sum(i,qp*Com2(i)*y2(i,'1'));
+
+Equation COMatj(j) Operations and maintenance cost at secondary treatment unit;
+         COMatj(j)$(ord(j)>=2)..OMC(j)=e=sum(i,q(j-1)*Com2(i)*y2(i,j));
+
+Equation COMatf Operations and maintenance cost at final treatment unit;
+         COMatf..OMCf=e=sum(f,q('5')*Com3(f)*y3(f));
+$offtext
+
+$ontext
+Equation Logici(i) Logical relation at secondary treatment unit (each technology is assigned once except ibypass);
+         Logici(i) ..sum(j,y2(i,j))=l=1;
+
+Equation CUatj1(c) Maximum allowable contaminant level at j=1;
+         CUatj1(c)..sum(p,Cp(c)*y1(p))=l=sum(i,y2(i,'1')*Cup2(i,c));
+$offtext
+
+*option solprint = Silent;
+
+$ontext
+y3.fx('MED')=1;
+y1.fx('API')=1;
+y3.fx('MVC')=1;
+y2.fx('MF','1')=1;
+y2.fx('NF','2')=1;
+y2.fx('IGF','3')=1;
+y2.fx('ibypass','4')=1;
+y2.fx('ibypass','5')=1;
+$offtext
+
+$ontext
+Ecostp(p)
+Ecost(j)
+Ecostf(f)
+SludgeCp
+SludgeC(j)
+SludgeCf
+OMCp
+OMC(j)
+OMCf
+
+Com1(p) Maintenance cost for pretreatment unit($) per h  /API  1265
+                                                          CPI  316/
+
+Com2(i) Maintenance cost for secondary treatment unit($) per h /IGF  15820
+                                                                HC  3677
+                                                                CF  28500
+                                                                NF  23730
+                                                                MF  29149
+                                                                ibypass  0/
+
+Com3(f) Maintenance cost for final treatment unit ($) per h/ MED  174863
+                                                             MVC  123351
+                                                             fbypass 0/
+
+$offtext
