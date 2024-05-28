@@ -4,6 +4,9 @@
 ### Machine Learning (Classification)
 This Python-based project involves training, testing, and evaluating multiple classification models. The objective is to identify the most accurate model for classifying breast cancer tumors as benign or malignant based on their characteristics. The dataset, sourced from the University of Wisconsin, is available on Kaggle through the following link: https://www.kaggle.com/datasets/roustekbio/breast-cancer-csv. 
 
+### Mathematical Modelling (GAMS)
+This GAMS code represents my initial effort to solve a mixed-integer nonlinear optimization model aimed at finding the optimal design for a multi-objective produced water treatment process. The model incorporates two water treatment units and utilizes the weighted-sum method with the Baron Solver. However, due to numerical challenges associated with modeling changes in particle and droplet size distributions of the contaminants, further progress with GAMS was not feasible. Consequently, the problem was implemented and successfully solved using Julia.
+
 ### Sales Data Analysis Using Pandas
 In this project, Pandas library is used to analyze actual transactions from UK retailers. The analysis starts by exploring the dataset and processing the data to answer seven questions aimed at improving the profitability of the retailers. The dataset can be found on Kaggle using this link: https://www.kaggle.com/datasets/carrie1/ecommerce-data
 
